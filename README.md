@@ -120,7 +120,10 @@ The dashboard provides insights into job roles, company demographics, and geogra
 
 
 
+
+# 📂 Project Structure
 job-market-dashboard/
+
 │── data/                
 │── scripts/            
 │── tableau/            
