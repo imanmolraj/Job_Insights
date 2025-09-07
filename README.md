@@ -121,11 +121,11 @@ The dashboard provides insights into job roles, company demographics, and geogra
 
 
 job-market-dashboard/
-│── data/                 # Raw & filtered datasets
-│── scripts/              # Python data cleaning & filtering
-│── tableau/              # Tableau workbooks (.twb / .twbx)
-│── index.html            # Web integration with time logic
-│── README.md             # Documentation
+│── data/                
+│── scripts/            
+│── tableau/            
+│── index.html            
+│── README.md          
 
 📸 Sample Preview
 
