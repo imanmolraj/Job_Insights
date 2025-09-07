@@ -132,7 +132,7 @@ job-market-dashboard/
 
 📸 Sample Preview
 
-![image alt]()
+![image alt](dashboard.png)
 
 ![image alt](index.png)
 
