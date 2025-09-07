@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Job Insight Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: "Segoe UI", Arial, sans-serif;
@@ -17,8 +18,8 @@
     header {
       background: linear-gradient(90deg, #1e3c72, #2a5298);
       color: #fff;
-      padding: 1.2rem;
-      font-size: 1.6rem;
+      padding: 1rem;
+      font-size: 1.4rem;
       font-weight: 600;
       text-align: center;
       box-shadow: 0 3px 10px rgba(0,0,0,0.25);
@@ -26,8 +27,8 @@
 
     .wrapper {
       flex: 1;
-      margin: 20px auto;
-      width: 92%;
+      margin: 15px auto;
+      width: 95%;
       max-width: 1200px;
     }
 
@@ -92,7 +93,7 @@
     }
 
     .note {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: #c0392b;
       margin-top: 20px;
       font-weight: 500;
@@ -117,13 +118,38 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+   
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+      }
+      .switch-box {
+        justify-content: center;
+      }
+      .note {
+        font-size: 0.9rem;
+        padding: 0 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .switch {
+        width: 40px;
+        height: 22px;
+      }
+      .slider:before {
+        height: 16px;
+        width: 16px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>📊 Job Insight</header>
 
   <div class="wrapper">
-    
     <div class="switch-box">
       <label class="switch">
         <input type="checkbox" id="freeAccess">
@@ -131,33 +157,60 @@
       </label>
       <label for="freeAccess" style="margin-left:8px; cursor:pointer;">Unlock Anytime</label>
     </div>
-
-    
+     
     <div id="board" class="board" style="display:none;">
-      <div class='tableauPlaceholder' id='vizBox' style='position: relative'>
+    
+      <div class='tableauPlaceholder' id='viz1757264315258' style='position: relative'><noscript>
+        <a href='#'><img alt='Job Market Insights Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Jo&#47;JobMarketInsightsDashboard_17558017217110&#47;JobMarketInsightsDashboard&#47;1_rss.png' 
+          style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+            <param name='name' value='JobMarketInsightsDashboard_17558017217110&#47;JobMarketInsightsDashboard' />
+            <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Jo&#47;JobMarketInsightsDashboard_17558017217110&#47;JobMarketInsightsDashboard&#47;1.png' /> 
+            <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' /><param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' /></object>
+     </div>                
+      <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1757264315258');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+      
+        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+        else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+        else { vizElement.style.width='100%';vizElement.style.height='1877px';}                     
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+      </script>
+      <div class='tableauPlaceholder' id='viz1757264315258' style='width:100%;'>
         <noscript>
           <a href='#'>
-            <img alt='Job Insight Dashboard' 
-                 src='https://public.tableau.com/static/images/Jo/JobMarketInsightsDashboard_17558017217110/JobMarketInsightsDashboard/1_rss.png' 
+            <img alt='Job Market Insights Dashboard'
+                 src='https://public.tableau.com/static/images/Jo/JobMarketInsightsDashboard_17558017217110/JobMarketInsightsDashboard/1_rss.png'
                  style='border:none'/>
           </a>
         </noscript>
-        <object class='tableauViz' style='display:none;'>
+        <object class='tableauViz' id="tableauViz" style='width:100%;height:600px;'>
           <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
           <param name='embed_code_version' value='3'/>
+          <param name='site_root' value=''/>
           <param name='name' value='JobMarketInsightsDashboard_17558017217110/JobMarketInsightsDashboard'/>
           <param name='tabs' value='no'/>
           <param name='toolbar' value='yes'/>
+          <param name='static_image' value='https://public.tableau.com/static/images/Jo/JobMarketInsightsDashboard_17558017217110/JobMarketInsightsDashboard/1.png'/>
           <param name='animate_transition' value='yes'/>
+          <param name='display_static_image' value='yes'/>
           <param name='display_spinner' value='yes'/>
           <param name='display_overlay' value='yes'/>
           <param name='display_count' value='yes'/>
           <param name='language' value='en-US'/>
+          <param name='filter' value='publish=yes'/>
         </object>
       </div>
     </div>
 
-   
     <div id="note" class="note"></div>
   </div>
 
@@ -174,7 +227,7 @@
       let anytime = switchBtn.checked;
       let now = new Date();
       let utcHour = now.getUTCHours();
-      let istHour = (utcHour + 5 + 24) % 24; 
+      let istHour = (utcHour + 5 + 24) % 24;
 
       if (anytime || (istHour >= 15 && istHour < 17)) {
         board.style.display = "block";
@@ -188,23 +241,26 @@
     switchBtn.addEventListener("change", verifyAccess);
     verifyAccess();
 
-   
-    let vizBox = document.getElementById('vizBox');
-    let vizElement = vizBox.getElementsByTagName('object')[0];
-    if (vizBox.offsetWidth > 800) {
-      vizElement.style.width = '100%';
-      vizElement.style.height = (vizBox.offsetWidth * 0.75) + 'px';
-    } else if (vizBox.offsetWidth > 500) {
-      vizElement.style.width = '100%';
-      vizElement.style.height = (vizBox.offsetWidth * 0.75) + 'px';
-    } else {
-      vizElement.style.width = '100%';
-      vizElement.style.height = '1877px';
+    
+    function resizeViz() {
+      let vizBox = document.getElementById('viz1757264315258');
+      let vizElement = document.getElementById('tableauViz');
+      if (window.innerWidth > 800) {
+        vizElement.style.height = (vizBox.offsetWidth * 0.6) + "px";
+      } else if (window.innerWidth > 500) {
+        vizElement.style.height = (vizBox.offsetWidth * 0.75) + "px";
+      } else {
+        vizElement.style.height = "500px";
+      }
     }
+
+    window.addEventListener("resize", resizeViz);
+    resizeViz();
+
+    
     let scriptEl = document.createElement('script');
     scriptEl.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptEl, vizElement);
+    document.body.appendChild(scriptEl);
   </script>
 </body>
 </html>
-
