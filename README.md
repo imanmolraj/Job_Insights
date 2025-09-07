@@ -169,6 +169,7 @@ Open index.html in your browser.
 Dashboards will automatically display based on the configured time-based logic.
 
 📂 Repository Structure
+
 job-market-dashboard/
 │── data/                 # Raw & filtered datasets
 │── scripts/              # Python scripts for data filtering & cleaning
