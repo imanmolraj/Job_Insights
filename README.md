@@ -1,67 +1,192 @@
-# Job_Insights
+📊 Job Market Trends Dashboard
 
-This repository contains the code and documentation for a data analysis and visualization project focused on building an interactive job market trends dashboard. The project leverages a comprehensive dataset of job postings to provide key insights into various job roles, company demographics, and geographical trends.
+This repository contains the code and documentation for a data analysis and visualization project focused on building an interactive job market trends dashboard. The project leverages a comprehensive dataset of job postings to uncover insights into job roles, company demographics, and geographical hiring patterns.
 
-Tech Stack
-Data Analysis: Python with the Pandas library for all data cleaning, filtering, and transformation tasks.
+🚀 Tech Stack
 
-Data Visualization: Tableau for creating interactive dashboards and reports.
+Data Analysis: Python (Pandas) → Data cleaning, filtering, and transformation
 
-Front-End Integration: HTML and JavaScript for embedding the dashboard on a webpage and implementing time-based display logic.
+Data Visualization: Tableau → Interactive dashboards and reports
 
-Dashboard Features
-The final dashboard is a culmination of five distinct tasks, each designed to answer a specific business question. The dashboard is fully interactive and provides the following features:
+Front-End Integration: HTML + JavaScript → Embedding Tableau dashboards with time-based logic
+
+📌 Dashboard Features
+
+The final interactive dashboard answers five distinct business questions, each with custom filters, visuals, and time-based logic.
 
 Task 1: Intern Preference Analysis
-Purpose: Visualizes preference trends for internship roles.
 
-Data Filters: work_type = 'Intern', latitude < 10, county_name not starting with A, B, C, or D, job_title max 10 characters, company_size < 50000.
+Purpose: Visualizes internship preference trends.
 
-Visual: Bar chart showing Preference vs. Number of Records.
+Filters:
 
-Time-Based Logic: Visible between 3 PM and 5 PM IST.
+work_type = Intern
+
+latitude < 10
+
+county_name not starting with A, B, C, or D
+
+job_title max 10 characters
+
+company_size < 50,000
+
+Visual: Bar chart (Preference vs. Number of Records)
+
+Time Visibility: 3 PM – 5 PM IST
 
 Task 2: Mechanical Engineer Insights
-Purpose: Analyzes trends for Mechanical Engineer roles in specific countries.
 
-Data Filters: company_size < 50000, job_title = 'Mechanical Engineer', experience > 5 years, country is Asian, salary_range > $50k, work_type = 'Part-time' or 'Full-time', preference = 'Male', job_portal = 'indeed'.
+Purpose: Analyzes Mechanical Engineer roles in specific Asian countries.
 
-Visual: Bar chart of Company Name vs. Company Size.
+Filters:
 
-Time-Based Logic: Visible between 3 PM and 5 PM IST.
+company_size < 50,000
+
+job_title = Mechanical Engineer
+
+experience > 5 years
+
+country = Asian
+
+salary_range > $50k
+
+work_type = Part-time / Full-time
+
+preference = Male
+
+job_portal = indeed
+
+Visual: Bar chart (Company Name vs. Company Size)
+
+Time Visibility: 3 PM – 5 PM IST
 
 Task 3: Top 10 Data Roles
-Purpose: Identifies the top 10 companies hiring for data-related roles in non-Asian countries.
 
-Data Filters: job_title is 'Data Engineer' or 'Data Scientist', country is not Asian and does not start with 'C', preference = 'Female', job_posting_date between 01/01/2023 and 06/01/2023, qualification = 'B.Tech', latitude < 10.
+Purpose: Identifies top companies hiring for Data Engineer/Data Scientist roles in non-Asian countries.
 
-Visuals: Bar chart of the top 10 companies and an interactive map.
+Filters:
 
-Time-Based Logic: Visible between 3 PM and 5 PM IST.
+job_title = Data Engineer / Data Scientist
+
+country ≠ Asian and does not start with "C"
+
+preference = Female
+
+job_posting_date = 01/01/2023 → 06/01/2023
+
+qualification = B.Tech
+
+latitude < 10
+
+Visuals:
+
+Bar chart (Top 10 companies)
+
+Interactive map
+
+Time Visibility: 3 PM – 5 PM IST
 
 Task 4: African Job Insights
-Purpose: Explores job trends in African countries based on specific qualifications and experience.
 
-Data Filters: qualification is 'B.tech', 'M.tech', or 'PhD', work_type = 'Full time', country is African, job_title starts with 'D', preference = 'Male', company_size > 80,000, contact_person starts with 'A', job_portal = 'indeed'.
+Purpose: Explores job trends in African countries.
 
-Visuals: Bar chart of Company Name vs. Number of Records and an interactive map.
+Filters:
 
-Time-Based Logic: Visible between 3 PM and 6 PM IST.
+qualification = B.Tech / M.Tech / PhD
+
+work_type = Full time
+
+country = African
+
+job_title starts with "D"
+
+preference = Male
+
+company_size > 80,000
+
+contact_person starts with "A"
+
+job_portal = indeed
+
+Visuals:
+
+Bar chart (Company Name vs. Number of Records)
+
+Interactive map
+
+Time Visibility: 3 PM – 6 PM IST
 
 Task 5: India & Germany Job Trends
-Purpose: Compares job market trends for specific roles in India and Germany.
 
-Data Filters: country is 'India' or 'Germany', qualification = 'B.tech', work_type = 'Full time', experience > 2 years, job_title is 'Data Scientist', 'Art Teacher', or 'Aerospace Engineer', salary_range > $10k, job_posting_date before 08/01/2023, job_portal = 'indeed', preference = 'Female'.
+Purpose: Compares hiring trends in India vs. Germany.
 
-Visual: Bar chart with distinct color-coding for India (Orange) and Germany (Green).
+Filters:
 
-Time-Based Logic: Visible between 3 PM and 5 PM IST.
+country = India / Germany
 
-How to Use the Repository
-Clone the Repository: git clone [repository_url]
+qualification = B.Tech
 
-Run the Python Scripts: Execute the Python files to generate the filtered CSV data for each task.
+work_type = Full time
 
-Open the Tableau Workbook: Use the filtered data to work with the Tableau visualizations.
+experience > 2 years
 
-View the Live Dashboard: Open the index.html file in your browser to see the combined dashboard.
+job_title = Data Scientist / Art Teacher / Aerospace Engineer
+
+salary_range > $10k
+
+job_posting_date < 08/01/2023
+
+job_portal = indeed
+
+preference = Female
+
+Visual: Bar chart (Orange = India, Green = Germany)
+
+Time Visibility: 3 PM – 5 PM IST
+
+🛠️ How to Use
+
+Clone the Repository
+
+git clone [repository_url]
+cd job-market-dashboard
+
+
+Run Python Scripts
+
+Execute the Python files to generate filtered CSV datasets for each task.
+
+Open Tableau Workbook
+
+Load the filtered datasets into Tableau.
+
+Explore or customize the interactive dashboards.
+
+View Live Dashboard
+
+Open index.html in your browser.
+
+Dashboards will automatically display based on the configured time-based logic.
+
+📂 Repository Structure
+job-market-dashboard/
+│── data/                 # Raw & filtered datasets
+│── scripts/              # Python scripts for data filtering & cleaning
+│── tableau/              # Tableau workbooks (.twb / .twbx)
+│── index.html            # Web integration with time-based logic
+│── README.md             # Project documentation
+
+📸 Sample Dashboard Preview
+
+(Add a screenshot of your Tableau dashboard here)
+
+✨ Key Highlights
+
+✔️ Fully interactive Tableau dashboard
+✔️ Data-driven insights tailored to specific roles & regions
+✔️ Smart time-based visibility logic
+✔️ Easy integration into a website
+
+📜 License
+
+This project is licensed under the MIT License – feel free to use and modify.
