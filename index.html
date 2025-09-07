@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Insight Hub</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      color: #fff;
+      padding: 1.2rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    }
+
+    .wrapper {
+      flex: 1;
+      margin: 20px auto;
+      width: 92%;
+      max-width: 1200px;
+    }
+
+    .switch-box {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #2c3e50;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 26px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #bbb;
+      transition: .3s;
+      border-radius: 26px;
+      cursor: pointer;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #fff;
+      transition: .3s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #27ae60;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(22px);
+    }
+
+    .board {
+      border-radius: 14px;
+      padding: 10px;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .note {
+      font-size: 1.05rem;
+      color: #c0392b;
+      margin-top: 20px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    footer {
+      background: #1e3c72;
+      color: #ecf0f1;
+      text-align: center;
+      padding: 14px;
+      font-size: 0.9rem;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+    }
+
+    footer a {
+      color: #f1c40f;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>📊 Job Insight</header>
+
+  <div class="wrapper">
+    <!-- Toggle Switch -->
+    <div class="switch-box">
+      <label class="switch">
+        <input type="checkbox" id="freeAccess">
+        <span class="slider"></span>
+      </label>
+      <label for="freeAccess" style="margin-left:8px; cursor:pointer;">Unlock Anytime</label>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="board" class="board" style="display:none;">
+      <div class='tableauPlaceholder' id='vizBox' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt='Job Insight Dashboard' 
+                 src='https://public.tableau.com/static/images/Jo/JobMarketInsightsDashboard_17558017217110/JobMarketInsightsDashboard/1_rss.png' 
+                 style='border:none'/>
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+          <param name='embed_code_version' value='3'/>
+          <param name='name' value='JobMarketInsightsDashboard_17558017217110/JobMarketInsightsDashboard'/>
+          <param name='tabs' value='no'/>
+          <param name='toolbar' value='yes'/>
+          <param name='animate_transition' value='yes'/>
+          <param name='display_spinner' value='yes'/>
+          <param name='display_overlay' value='yes'/>
+          <param name='display_count' value='yes'/>
+          <param name='language' value='en-US'/>
+        </object>
+      </div>
+    </div>
+
+    <!-- Message -->
+    <div id="note" class="note"></div>
+  </div>
+
+  <footer>
+    © 2025 Job Insight
+  </footer>
+
+  <script type="text/javascript">
+    const board = document.getElementById("board");
+    const note = document.getElementById("note");
+    const switchBtn = document.getElementById("freeAccess");
+
+    function verifyAccess() {
+      let anytime = switchBtn.checked;
+      let now = new Date();
+      let utcHour = now.getUTCHours();
+      let istHour = (utcHour + 5 + 24) % 24; // IST offset (+5h, ignoring 30m)
+
+      if (anytime || (istHour >= 15 && istHour < 17)) {
+        board.style.display = "block";
+        note.innerText = "";
+      } else {
+        board.style.display = "none";
+        note.innerText = "⏳ Access is available only from 3 PM to 5 PM (IST).";
+      }
+    }
+
+    switchBtn.addEventListener("change", verifyAccess);
+    verifyAccess();
+
+    // Tableau loader
+    let vizBox = document.getElementById('vizBox');
+    let vizElement = vizBox.getElementsByTagName('object')[0];
+    if (vizBox.offsetWidth > 800) {
+      vizElement.style.width = '100%';
+      vizElement.style.height = (vizBox.offsetWidth * 0.75) + 'px';
+    } else if (vizBox.offsetWidth > 500) {
+      vizElement.style.width = '100%';
+      vizElement.style.height = (vizBox.offsetWidth * 0.75) + 'px';
+    } else {
+      vizElement.style.width = '100%';
+      vizElement.style.height = '1877px';
+    }
+    let scriptEl = document.createElement('script');
+    scriptEl.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptEl, vizElement);
+  </script>
+</body>
+</html>
