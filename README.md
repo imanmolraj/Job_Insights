@@ -74,7 +74,7 @@ The dashboard provides insights into job roles, company demographics, and geogra
 - **Visuals:**  
   - Bar chart (Company Name vs. Records)  
   - Interactive map  
-- **Time Visibility:** ⏰ 3 PM – 6 PM IST  
+- **Time Visibility:** ⏰ 3 PM – 5 PM IST  
 
 ---
 
