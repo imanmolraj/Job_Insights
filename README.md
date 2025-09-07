@@ -134,7 +134,7 @@ job-market-dashboard/
 
 ![image alt]()
 
-![image alt]()
+![image alt](index.png)
 
 ✨ Highlights
 
