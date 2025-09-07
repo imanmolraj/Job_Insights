@@ -123,7 +123,7 @@
   <header>📊 Job Insight</header>
 
   <div class="wrapper">
-    <!-- Toggle Switch -->
+    
     <div class="switch-box">
       <label class="switch">
         <input type="checkbox" id="freeAccess">
@@ -132,7 +132,7 @@
       <label for="freeAccess" style="margin-left:8px; cursor:pointer;">Unlock Anytime</label>
     </div>
 
-    <!-- Dashboard -->
+    
     <div id="board" class="board" style="display:none;">
       <div class='tableauPlaceholder' id='vizBox' style='position: relative'>
         <noscript>
@@ -157,7 +157,7 @@
       </div>
     </div>
 
-    <!-- Message -->
+   
     <div id="note" class="note"></div>
   </div>
 
@@ -174,7 +174,7 @@
       let anytime = switchBtn.checked;
       let now = new Date();
       let utcHour = now.getUTCHours();
-      let istHour = (utcHour + 5 + 24) % 24; // IST offset (+5h, ignoring 30m)
+      let istHour = (utcHour + 5 + 24) % 24; 
 
       if (anytime || (istHour >= 15 && istHour < 17)) {
         board.style.display = "block";
@@ -188,7 +188,7 @@
     switchBtn.addEventListener("change", verifyAccess);
     verifyAccess();
 
-    // Tableau loader
+   
     let vizBox = document.getElementById('vizBox');
     let vizElement = vizBox.getElementsByTagName('object')[0];
     if (vizBox.offsetWidth > 800) {
@@ -207,3 +207,4 @@
   </script>
 </body>
 </html>
+
